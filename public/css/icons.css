@@ -1,0 +1,3380 @@
+/*
+ * BrByte - DeskTop APP
+ * Fernando Softov, http://softov.com.br
+ * Copyright (c) 2013 fernando@softov.com.br
+ * @license Private
+ * @version 0.1
+ */
+
+ .mime {
+    background-image: url("../img/mime/mime-unknown.png");
+    width: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.mime-antivirus {
+    background-image: url("../img/mime/mime-antivirus.png");
+}
+.mime-audio {
+    background-image: url("../img/mime/mime-audio.png");
+}
+.mime-binary {
+    background-image: url("../img/mime/mime-binary.png");
+}
+.mime-image {
+    background-image: url("../img/mime/mime-image.png");
+}
+.mime-json {
+    background-image: url("../img/mime/mime-json.png");
+}
+.mime-pack {
+    background-image: url("../img/mime/mime-pack.png");
+}
+.mime-unknown {
+    background-image: url("../img/mime/mime-unknown.png");
+}
+.mime-android {
+    background-image: url("../img/mime/mime-android.png");
+}
+.mime-7z {
+    background-image: url("../img/mime/mime-7z.png");
+}
+.mime-asp {
+    background-image: url("../img/mime/mime-script.png");
+}
+.mime-avi {
+    background-image: url("../img/mime/mime-video.png");
+}
+.mime-ai {
+    background-image: url("../img/mime/mime-ai.png");
+}
+.mime-aiff {
+    background-image: url("../img/mime/mime-aiff.png");
+}
+.mime-asc {
+    background-image: url("../img/mime/mime-asc.png");
+}
+.mime-audio {
+    background-image: url("../img/mime/mime-audio.png");
+}
+.mime-bin {
+    background-image: url("../img/mime/mime-bin.png");
+}
+.mime-bmp {
+    background-image: url("../img/mime/mime-image.png");
+}
+.mime-bz2 {
+    background-image: url("../img/mime/mime-bz2.png");
+}
+.mime-c {
+    background-image: url("../img/mime/mime-c.png");
+}
+.mime-cab {
+    background-image: url("../img/mime/mime-pack.png");
+}
+.mime-cfc {
+    background-image: url("../img/mime/mime-cfc.png");
+}
+.mime-cfm {
+    background-image: url("../img/mime/mime-cfm.png");
+}
+.mime-chm {
+    background-image: url("../img/mime/mime-chm.png");
+}
+.mime-class {
+    background-image: url("../img/mime/mime-class.png");
+}
+.mime-conf {
+    background-image: url("../img/mime/mime-conf.png");
+}
+.mime-cpp {
+    background-image: url("../img/mime/mime-cpp.png");
+}
+.mime-cs {
+    background-image: url("../img/mime/mime-cs.png");
+}
+.mime-css {
+    background-image: url("../img/mime/mime-css.png");
+}
+.mime-csv {
+    background-image: url("../img/mime/mime-csv.png");
+}
+.mime-deb {
+    background-image: url("../img/mime/mime-deb.png");
+}
+.mime-divx {
+    background-image: url("../img/mime/mime-divx.png");
+}
+.mime-doc {
+    background-image: url("../img/mime/mime-doc.png");
+}
+.mime-dot {
+    background-image: url("../img/mime/mime-dot.png");
+}
+.mime-eml {
+    background-image: url("../img/mime/mime-eml.png");
+}
+.mime-enc {
+    background-image: url("../img/mime/mime-enc.png");
+}
+.mime-file {
+    background-image: url("../img/mime/mime-file.png");
+}
+.mime-folder {
+    background-image: url("../img/mime/mime-folder.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mime-flv {
+    background-image: url("../img/mime/mime-video_flv.gif");
+}
+.mime-gif {
+    background-image: url("../img/mime/mime-gif.png");
+}
+.mime-gz {
+    background-image: url("../img/mime/mime-gz.png");
+}
+.mime-hlp {
+    background-image: url("../img/mime/mime-hlp.png");
+}
+.mime-htm {
+    background-image: url("../img/mime/mime-htm.png");
+}
+.mime-html {
+    background-image: url("../img/mime/mime-html.png");
+}
+.mime-ico {
+    background-image: url("../img/mime/mime-image.png");
+}
+.mime-image {
+    background-image: url("../img/mime/mime-image.png");
+}
+.mime-iso {
+    background-image: url("../img/mime/mime-iso.png");
+}
+.mime-jar {
+    background-image: url("../img/mime/mime-jar.png");
+}
+.mime-java {
+    background-image: url("../img/mime/mime-java.png");
+}
+.mime-jpeg {
+    background-image: url("../img/mime/mime-jpeg.png");
+}
+.mime-jpg {
+    background-image: url("../img/mime/mime-jpg.png");
+}
+.mime-js {
+    background-image: url("../img/mime/mime-js.png");
+}
+.mime-kdc {
+    background-image: url("../img/mime/mime-antivirus.png");
+}
+.mime-lua {
+    background-image: url("../img/mime/mime-lua.png");
+}
+.mime-m {
+    background-image: url("../img/mime/mime-m.png");
+}
+.mime-mm {
+    background-image: url("../img/mime/mime-mm.png");
+}
+.mime-mov {
+    background-image: url("../img/mime/mime-mov.png");
+}
+.mime-mp3 {
+    background-image: url("../img/mime/mime-mp3.png");
+}
+.mime-mp4 {
+    background-image: url("../img/mime/mime-video_mp4.gif");
+}
+.mime-mpg {
+    background-image: url("../img/mime/mime-mpg.png");
+}
+.mime-mpeg {
+    background-image: url("../img/mime/mime-mpg.png");
+}
+.mime-odc {
+    background-image: url("../img/mime/mime-odc.png");
+}
+.mime-odf {
+    background-image: url("../img/mime/mime-odf.png");
+}
+.mime-odg {
+    background-image: url("../img/mime/mime-odg.png");
+}
+.mime-odi {
+    background-image: url("../img/mime/mime-odi.png");
+}
+.mime-odp {
+    background-image: url("../img/mime/mime-odp.png");
+}
+.mime-ods {
+    background-image: url("../img/mime/mime-ods.png");
+}
+.mime-odt {
+    background-image: url("../img/mime/mime-odt.png");
+}
+.mime-ogg {
+    background-image: url("../img/mime/mime-ogg.png");
+}
+.mime-pdf {
+    background-image: url("../img/mime/mime-pdf.png");
+}
+.mime-pgp {
+    background-image: url("../img/mime/mime-pgp.png");
+}
+.mime-php {
+    background-image: url("../img/mime/mime-php.png");
+}
+.mime-pl {
+    background-image: url("../img/mime/mime-pl.png");
+}
+.mime-png {
+    background-image: url("../img/mime/mime-png.png");
+}
+.mime-ppt {
+    background-image: url("../img/mime/mime-ppt.png");
+}
+.mime-ps {
+    background-image: url("../img/mime/mime-ps.png");
+}
+.mime-py {
+    background-image: url("../img/mime/mime-py.png");
+}
+.mime-ram {
+    background-image: url("../img/mime/mime-ram.png");
+}
+.mime-rar {
+    background-image: url("../img/mime/mime-rar.png");
+}
+.mime-rb {
+    background-image: url("../img/mime/mime-rb.png");
+}
+.mime-rm {
+    background-image: url("../img/mime/mime-rm.png");
+}
+.mime-rpm {
+    background-image: url("../img/mime/mime-rpm.png");
+}
+.mime-rtf {
+    background-image: url("../img/mime/mime-rtf.png");
+}
+.mime-sig {
+    background-image: url("../img/mime/mime-sig.png");
+}
+.mime-sql {
+    background-image: url("../img/mime/mime-sql.png");
+}
+.mime-stamp {
+    background-image: url("../img/mime/mime-antivirus.png");
+}
+.mime-swf {
+    background-image: url("../img/mime/mime-swf.png");
+}
+.mime-sxc {
+    background-image: url("../img/mime/mime-sxc.png");
+}
+.mime-sxd {
+    background-image: url("../img/mime/mime-sxd.png");
+}
+.mime-sxi {
+    background-image: url("../img/mime/mime-sxi.png");
+}
+.mime-sxw {
+    background-image: url("../img/mime/mime-sxw.png");
+}
+.mime-tar {
+    background-image: url("../img/mime/mime-tar.png");
+}
+.mime-tex {
+    background-image: url("../img/mime/mime-tex.png");
+}
+.mime-tgz {
+    background-image: url("../img/mime/mime-tgz.png");
+}
+.mime-txt {
+    background-image: url("../img/mime/mime-txt.png");
+}
+.mime-vcf {
+    background-image: url("../img/mime/mime-vcf.png");
+}
+.mime-video {
+    background-image: url("../img/mime/mime-video.png");
+}
+.mime-vsd {
+    background-image: url("../img/mime/mime-vsd.png");
+}
+.mime-vpu {
+    background-image: url("../img/mime/mime-antivirus.png");
+}
+.mime-wav {
+    background-image: url("../img/mime/mime-wav.png");
+}
+.mime-wma {
+    background-image: url("../img/mime/mime-wma.png");
+}
+.mime-wmv {
+    background-image: url("../img/mime/mime-wmv.png");
+}
+.mime-xls {
+    background-image: url("../img/mime/mime-xls.png");
+}
+.mime-xml {
+    background-image: url("../img/mime/mime-xml.png");
+}
+.mime-xpi {
+    background-image: url("../img/mime/mime-xpi.png");
+}
+.mime-xvid {
+    background-image: url("../img/mime/mime-xvid.png");
+}
+.mime-zip {
+    background-image: url("../img/mime/mime-zip.png");
+}
+
+.mime-video-flv {
+    background-image: url("../img/mime/mime-video_flv.gif");
+}
+.mime-video-mp4 {
+    background-image: url("../img/mime/mime-video_mp4.gif");
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+.icon16 {
+    width: 16px;
+    display: inline-block;
+}
+
+.icon-cc {
+    line-height: 10px;
+    border-width: 0px;
+    font-size: 1px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border-style: none;
+    margin-right: 2px;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+.icon-fill .x-grid-cell-inner {
+    padding: 2px;
+}
+.icon-combo {
+    background-size: 100%;
+    width: 12px !important;
+    height: 12px !important;
+
+    margin-left: 2px;
+    /* display: inline-block; */
+    display: inline-table;
+    /* vertical-align: middle; */
+}
+.icon-fill-16 {
+    background-size: 100%;
+    width: 16px;
+    height: 16px;
+    margin-left: 2px;
+    display: inline-block;
+}
+.icon-fill-14 {
+    background-size: 100%;
+    width: 14px;
+    height: 14px;
+    margin-left: 2px;
+    display: inline-block;
+}
+.icon-fill-12 {
+    background-size: 100%;
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+    display: inline-block;
+}
+
+.icon-tree {
+    background-size: 100%;
+    width: 14px;
+    height: 14px;
+    vertical-align: baseline;
+}
+
+.icon-space {
+    margin-left: 3px;
+}
+
+.icon-hide {
+    visibility: hidden !important;
+}
+
+.icon-load {
+    background-image: url("../img/icon16/spinner.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-money-off {
+    background-image: url("../img/icon16/money-off.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-money-change {
+    background-image: url("../img/icon16/money-change.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-cacheable {
+    background-image: url("../img/icon16/cacheable.png");
+}
+.icon-cacheable-no {
+    background-image: url("../img/icon16/cacheable-no.png");
+}
+.icon-cache-nostore {
+    background-image: url("../img/icon16/cache-nostore.png");
+}
+
+.icon-release {
+    background-image: url("../img/icon16/release.png");
+}
+.x-menu-item .icon-mobile,
+.icon-mobile {
+    background-image: url("../img/icon16/mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-certificate {
+    background-image: url("../img/icon16/certificate.png");
+}
+.icon-range {
+    background-image: url("../img/icon16/range.png");
+}
+
+.x-menu-item .icon-bypassed,
+.icon-bypassed {
+    background-image: url("../img/icon16/bypassed.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item .icon-range,
+.icon-range {
+    background-image: url("../img/icon16/range.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item .icon-arrow-t,
+.icon-arrow-t {
+    background-image: url("../img/icon16/arrow-t.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-arrow-b,
+.icon-arrow-b {
+    background-image: url("../img/icon16/arrow-b.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-arrow-l,
+.icon-arrow-l {
+    background-image: url("../img/icon16/arrow-l.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-arrow-r,
+.icon-arrow-r {
+    background-image: url("../img/icon16/arrow-r.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item .icon-tile,
+.icon-tile {
+    background-image: url("../img/icon16/tile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-flag-en {
+    background-image: url("../img/icon16/flag-en.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-flag-es {
+    background-image: url("../img/icon16/flag-es.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-flag-br {
+    background-image: url("../img/icon16/flag-br.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-http {
+    background-image: url("../img/icon16/http.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-ookla {
+    background-image: url("../img/icon16/ookla.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-speedr {
+    background-image: url("../img/icon16/speedr.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-captor {
+    background-image: url("../img/icon16/captor.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-controllr {
+    background-image: url("../img/icon16/controllr.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-voipr {
+    background-image: url("../img/icon16/voipr.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-border {
+    background-image: url("../img/icon16/border.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-contract {
+    background-image: url("../img/icon16/contract.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-brbos {
+    background-image: url("../img/icon16/brbos.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-linkr {
+    background-image: url("../img/icon16/linkr.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* A */
+.icon-app-acl {
+    background-image: url("../img/icon16/acl.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-acl-cadastre {
+    background-image: url("../img/icon16/acl-cadastre.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-acl-category {
+    background-image: url("../img/icon16/acl-category.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item .icon-app-acl-client,
+.icon-app-acl-client {
+    background-image: url("../img/icon16/acl-client.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-acl-interest,
+.icon-app-acl-interest {
+    background-image: url("../img/icon16/acl-interest.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-acl-postit,
+.icon-app-acl-postit {
+    background-image: url("../img/icon16/acl-postit.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-acl-client-note {
+    background-image: url("../img/icon16/acl-client-note.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-acl-role {
+    background-image: url("../img/icon16/acl-role.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-acl-users,
+.icon-app-acl-users {
+    background-image: url("../img/icon16/acl-users.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-acl-users-online {
+    background-image: url("../img/icon16/acl-users-online.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-accesslog {
+    background-image: url("../img/icon16/accesslog.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-accesslog-view {
+    background-image: url("../img/icon16/accesslog-view.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-add {
+    background-image: url("../img/icon16/add.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-attributes {
+    background-image: url("../img/icon16/attributes.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.audio,
+.x-grid-tree-node-expanded img.audio,
+.x-menu-item .icon-app-audio,
+.icon-app-audio {
+    background-image: url("../img/icon16/audio.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-backup {
+    background-image: url("../img/icon16/backup.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-barcode,
+.icon-app-barcode {
+    background-image: url("../img/icon16/barcode.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-bank {
+    background-image: url("../img/icon16/bank.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-bios {
+    background-image: url("../img/icon16/bios.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-app-brbyte,
+.icon-app-brbyte {
+    background-image: url("../img/icon16/brbyte.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-broom {
+    background-image: url("../img/icon16/broom.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-bucket {
+    background-image: url("../img/icon16/bucket.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-bug {
+    background-image: url("../img/icon16/bug.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-cache {
+    background-image: url("../img/icon16/cache.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-card,
+.icon-app-card {
+    background-image: url("../img/icon16/card.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-cascate,
+.icon-app-cascate {
+    background-image: url("../img/icon16/cascate.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-certificate {
+    background-image: url("../img/icon16/certificate.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-certificate-red {
+    background-image: url("../img/icon16/certificate-red.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-coupon {
+    background-image: url("../img/icon16/coupon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-co-profile {
+    background-image: url("../img/icon16/co-profile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-clients,
+.icon-app-clients {
+    background-image: url("../img/icon16/clients.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-app-clients-on,
+.icon-app-clients-on {
+    background-image: url("../img/icon16/clients-on.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-app-clients-off,
+.icon-app-clients-off {
+    background-image: url("../img/icon16/clients-off.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-calendar {
+    background-image: url("../img/icon16/calendar.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-holidays {
+    background-image: url("../img/icon16/holidays.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-cross {
+    background-image: url("../img/icon16/cross.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-connections {
+    background-image: url("../img/icon16/connections.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-control,
+.icon-app-control {
+    background-image: url("../img/icon16/control.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-config {
+    background-image: url("../img/icon16/config.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-copy {
+    background-image: url("../img/icon16/copy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-coredump {
+    background-image: url("../img/icon16/coredump.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-cpe-mac,
+.icon-app-cpe-mac {
+    background-image: url("../img/icon16/cpe-mac.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-checked {
+    background-image: url("../img/icon16/checked.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-coupon,
+.icon-app-coupon {
+    background-image: url("../img/icon16/coupon.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-dashboard {
+    background-image: url("../img/icon16/dashboard.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-del {
+    background-image: url("../img/icon16/del.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-devices {
+    background-image: url("../img/icon16/devices.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dp {
+    background-image: url("../img/icon16/dp.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-ds {
+    background-image: url("../img/icon16/ds.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-fiber {
+    background-image: url("../img/icon16/fiber.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-fleet {
+    background-image: url("../img/icon16/fleet.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-fleet-vehicle {
+    background-image: url("../img/icon16/fleet-vehicle.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-fleet-manufacturer {
+    background-image: url("../img/icon16/fleet-manufacturer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-fleet-model {
+    background-image: url("../img/icon16/fleet-model.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-fleet-odometer {
+    background-image: url("../img/icon16/fleet-odometer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-fleet-maintenance {
+    background-image: url("../img/icon16/fleet-maintenance.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dev-group {
+    background-image: url("../img/icon16/dev-group.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dev-sms {
+    background-image: url("../img/icon16/dev-sms.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dev-sms-campaign {
+    background-image: url("../img/icon16/dev-sms-campaign.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-drop {
+    background-image: url("../img/icon16/drop.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dropbox {
+    background-image: url("../img/icon16/dropbox.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dynasig {
+    background-image: url("../img/icon16/dynasig.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-phone {
+    background-image: url("../img/icon16/phone.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-action-col-icon.status_off,
+.status_off,
+.icon-app-disabled {
+    background-image: url("../img/icon16/disabled.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-dns {
+    background-image: url("../img/icon16/dns.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dns-acl {
+    background-image: url("../img/icon16/dns-acl.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dns-cache {
+    background-image: url("../img/icon16/dns-cache.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dns-config {
+    background-image: url("../img/icon16/dns-config.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dns-fwd {
+    background-image: url("../img/icon16/dns-fwd.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dns-root {
+    background-image: url("../img/icon16/dns-root.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dns-zone {
+    background-image: url("../img/icon16/dns-zone.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-dns-ip-ratelimit {
+    background-image: url("../img/icon16/dns-ip-ratelimit.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-download {
+    background-image: url("../img/icon16/download.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-drivers {
+    background-image: url("../img/icon16/drivers.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-edit {
+    background-image: url("../img/icon16/edit.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-action-col-icon.status_on,
+.status_on,
+.icon-app-enabled {
+    background-image: url("../img/icon16/enabled.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-equipment {
+    background-image: url("../img/icon16/equipment.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-expand {
+    background-image: url("../img/icon16/expand.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-export {
+    background-image: url("../img/icon16/export.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* flag info */
+.icon-app-flag-green {
+    background-image: url("../img/icon16/flag-green.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flag-red {
+    background-image: url("../img/icon16/flag-red.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flag-yellow {
+    background-image: url("../img/icon16/flag-yellow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-filter-l3 {
+    background-image: url("../img/icon16/filter-l3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-filter-l7 {
+    background-image: url("../img/icon16/filter-l7.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flush {
+    background-image: url("../img/icon16/flush.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-flow-collector {
+    background-image: url("../img/icon16/flow-collector.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flow-source {
+    background-image: url("../img/icon16/flow-source.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-flow-summary-filter {
+    background-image: url("../img/icon16/flow-summary-filter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flow-summary-ip {
+    background-image: url("../img/icon16/flow-summary-ip.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flow-summary-proto {
+    background-image: url("../img/icon16/flow-summary-proto.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flow-summary-port {
+    background-image: url("../img/icon16/flow-summary-port.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flow-summary-mac {
+    background-image: url("../img/icon16/flow-summary-mac.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-flow-stats-ip {
+    background-image: url("../img/icon16/flow-stats-ip.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flow-stats-proto {
+    background-image: url("../img/icon16/flow-stats-proto.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flow-stats-port {
+    background-image: url("../img/icon16/flow-stats-port.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-flow-stats-mac {
+    background-image: url("../img/icon16/flow-stats-mac.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-financial-campaign {
+    background-image: url("../img/icon16/financial-campaign.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-financial-cashflow {
+    background-image: url("../img/icon16/financial-cashflow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-financial-payable {
+    background-image: url("../img/icon16/financial-payable.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-financial-check {
+    background-image: url("../img/icon16/financial-check.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-financial-treasury,
+.icon-app-financial-treasury {
+    background-image: url("../img/icon16/financial-treasury.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-gerencianet {
+    background-image: url("../img/icon16/gerencianet.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-googledrive {
+    background-image: url("../img/icon16/googledrive.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-fw {
+    background-image: url("../img/icon16/fw.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item .icon-app-gear,
+.icon-app-gear {
+    background-image: url("../img/icon16/gear.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.hardware,
+.x-grid-tree-node-expanded img.hardware,
+.x-menu-item .icon-app-hardware,
+.icon-app-hardware {
+    background-image: url("../img/icon16/hardware.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-home {
+    background-image: url("../img/icon16/home.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-hotsite {
+    background-image: url("../img/icon16/hotsite.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-hd {
+    background-image: url("../img/icon16/hd.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-hd-out {
+    background-image: url("../img/icon16/hd-out.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-info {
+    background-image: url("../img/icon16/info.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-interceptions {
+    background-image: url("../img/icon16/interceptions.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-intercept-l3 {
+    background-image: url("../img/icon16/intercept-l3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-ippool {
+    background-image: url("../img/icon16/ippool.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-ippool-nw {
+    background-image: url("../img/icon16/ippool-nw.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item .icon-app-invoice,
+.icon-app-invoice {
+    background-image: url("../img/icon16/invoice.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-details {
+    background-image: url("../img/icon16/invoice-details.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-folder {
+    background-image: url("../img/icon16/invoice-folder.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-return {
+    background-image: url("../img/icon16/invoice-return.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-remittance {
+    background-image: url("../img/icon16/invoice-remittance.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-title {
+    background-image: url("../img/icon16/invoice-title.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-report {
+    background-image: url("../img/icon16/invoice-report.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-nf {
+    background-image: url("../img/icon16/invoice-nf.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-nf-pend {
+    background-image: url("../img/icon16/invoice-nf-pend.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-tax {
+    background-image: url("../img/icon16/invoice-tax.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-obs {
+    background-image: url("../img/icon16/invoice-obs.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-invoice-campaign {
+    background-image: url("../img/icon16/invoice-campaign.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-integration {
+    background-image: url("../img/icon16/integration.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-isp-plan {
+    background-image: url("../img/icon16/isp-plan.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* L */
+.icon-app-l3 {
+    background-image: url("../img/icon16/l3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-l7 {
+    background-image: url("../img/icon16/l7.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-less,
+.icon-app-less {
+    background-image: url("../img/icon16/less.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-license {
+    background-image: url("../img/icon16/license.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-license-alert {
+    background-image: url("../img/icon16/license-alert.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-license-reg {
+    background-image: url("../img/icon16/license-reg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-license-report {
+    background-image: url("../img/icon16/license-report.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-load,
+.icon-app-load {
+    background-image: url("../img/icon16/load.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-lock,
+.icon-app-lock {
+    background-image: url("../img/icon16/lock.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-logs,
+.icon-app-logs {
+    background-image: url("../img/icon16/logs.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-log,
+.icon-app-log {
+    background-image: url("../img/icon16/log.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-lottery-cad,
+.icon-app-lottery-cad {
+    background-image: url("../img/icon16/lottery-cad.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-lottery-coupon,
+.icon-app-lottery-coupon {
+    background-image: url("../img/icon16/lottery-coupon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-lottery-promo,
+.icon-app-lottery-promo {
+    background-image: url("../img/icon16/lottery-promo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* M */
+.x-menu-item .icon-app-mail,
+.icon-app-mail {
+    background-image: url("../img/icon16/mail.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-gray,
+.icon-app-mail-gray {
+    background-image: url("../img/icon16/mail-gray.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-manufacturer {
+    background-image: url("../img/icon16/manufacturer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-map-points,
+.icon-app-map-points {
+    background-image: url("../img/icon16/map-points.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-message-ballon,
+.icon-app-message-ballon {
+    background-image: url("../img/icon16/message-ballon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-minimize {
+    background-image: url("../img/icon16/minimize.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-modem,
+.icon-app-modem {
+    background-image: url("../img/icon16/modem.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-money-change,
+.icon-app-money-change {
+    background-image: url("../img/icon16/money-change.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-money-off,
+.icon-app-money-off {
+    background-image: url("../img/icon16/money-off.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-more,
+.icon-app-more {
+    background-image: url("../img/icon16/more.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-move {
+    background-image: url("../img/icon16/move.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-msg,
+.icon-app-msg {
+    background-image: url("../img/icon16/msg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-msg-open {
+    background-image: url("../img/icon16/msg-open.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-msg-read {
+    background-image: url("../img/icon16/msg-read.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-network-control,
+.icon-app-network-control {
+    background-image: url("../img/icon16/network-control.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-office,
+.icon-app-office {
+    background-image: url("../img/icon16/office.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-ontime {
+    background-image: url("../img/icon16/ontime.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-ontime-off {
+    background-image: url("../img/icon16/ontime-off.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-onu-reg {
+    background-image: url("../img/icon16/onu-reg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-onu-unreg {
+    background-image: url("../img/icon16/onu-unreg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-page-web {
+    background-image: url("../img/icon16/page-web.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-page-redir {
+    background-image: url("../img/icon16/page-redir.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-pending {
+    background-image: url("../img/icon16/pending.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-perm {
+    background-image: url("../img/icon16/perm.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-pipes {
+    background-image: url("../img/icon16/pipes.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-play {
+    background-image: url("../img/icon16/play.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-plugins {
+    background-image: url("../img/icon16/plugins.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-plugins-cat {
+    background-image: url("../img/icon16/plugins-cat.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-plugins-control {
+    background-image: url("../img/icon16/plugins-control.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-plugins-del {
+    background-image: url("../img/icon16/plugins-del.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-print {
+    background-image: url("../img/icon16/print.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-print-silver {
+    background-image: url("../img/icon16/print-silver.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-prefix,
+.icon-app-prefix {
+    background-image: url("../img/icon16/prefix.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-processor {
+    background-image: url("../img/icon16/processor.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-process {
+    background-image: url("../img/icon16/process.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-product {
+    background-image: url("../img/icon16/product.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-profiles {
+    background-image: url("../img/icon16/profiles.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-pppoe-server {
+    background-image: url("../img/icon16/pppoe-server.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-pptp-server {
+    background-image: url("../img/icon16/pptp-server.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-qos {
+    background-image: url("../img/icon16/qos.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-question {
+    background-image: url("../img/icon16/question.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-queues {
+    background-image: url("../img/icon16/queues.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-reboot,
+.icon-app-reboot {
+    background-image: url("../img/icon16/reboot.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-reflesh,
+.icon-app-reflesh {
+    background-image: url("../img/icon16/reflesh.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-refresh,
+.icon-app-refresh {
+    background-image: url("../img/icon16/refresh.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-rename {
+    background-image: url("../img/icon16/rename.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-app-reports,
+.icon-app-reports {
+    background-image: url("../img/icon16/reports.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-report-address {
+    background-image: url("../img/icon16/report-address.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-report-phone {
+    background-image: url("../img/icon16/report-phone.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-report-mail {
+    background-image: url("../img/icon16/report-mail.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item .icon-app-restore,
+.icon-app-restore {
+    background-image: url("../img/icon16/restore.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-revert,
+.icon-app-revert {
+    background-image: url("../img/icon16/revert.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-reverse,
+.icon-app-reverse {
+    background-image: url("../img/icon16/reverse.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item .icon-app-sale,
+.icon-app-sale {
+    background-image: url("../img/icon16/sale.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-samplelog {
+    background-image: url("../img/icon16/samplelog.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-samplelog-view {
+    background-image: url("../img/icon16/samplelog-view.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-save {
+    background-image: url("../img/icon16/save.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-search {
+    background-image: url("../img/icon16/search.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-server {
+    background-image: url("../img/icon16/server.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-search-blue {
+    background-image: url("../img/icon16/search-blue.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-search-red {
+    background-image: url("../img/icon16/search-red.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-search-yellow {
+    background-image: url("../img/icon16/search-yellow.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-secrets {
+    background-image: url("../img/icon16/secrets.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sessions {
+    background-image: url("../img/icon16/sessions.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-setmtu {
+    background-image: url("../img/icon16/setmtu.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-shutdown {
+    background-image: url("../img/icon16/shutdown.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item .icon-app-sip-branch,
+.icon-app-sip-branch {
+    background-image: url("../img/icon16/sip-branch.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-branch-absent {
+    background-image: url("../img/icon16/sip-branch-absent.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-branch-unreg {
+    background-image: url("../img/icon16/sip-branch-unreg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-call {
+    background-image: url("../img/icon16/sip-call.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-call-no-answer {
+    background-image: url("../img/icon16/sip-call-no-answer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-did {
+    background-image: url("../img/icon16/sip-did.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-dialog {
+    background-image: url("../img/icon16/sip-dialog.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-gateway {
+    background-image: url("../img/icon16/sip-gateway.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-gateway-down {
+    background-image: url("../img/icon16/sip-gateway-down.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-gateway-warn {
+    background-image: url("../img/icon16/sip-gateway-warn.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-sip-group,
+.icon-app-sip-group {
+    background-image: url("../img/icon16/sip-group.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-plan {
+    background-image: url("../img/icon16/sip-plan.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-svc-redirect {
+    background-image: url("../img/icon16/svc-redirect.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-registration {
+    background-image: url("../img/icon16/sip-registration.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-server {
+    background-image: url("../img/icon16/sip-server.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-svc-route {
+    background-image: url("../img/icon16/svc-route.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-svc-route-off {
+    background-image: url("../img/icon16/svc-route-off.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-svc-ivr,
+.icon-app-svc-ivr {
+    background-image: url("../img/icon16/svc-ivr.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-svc-cc {
+    background-image: url("../img/icon16/svc-cc.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-svc-cc-agent,
+.icon-app-svc-cc-agent {
+    background-image: url("../img/icon16/svc-cc-agent.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-svc-cc-queue,
+.icon-app-svc-cc-queue {
+    background-image: url("../img/icon16/svc-cc-queue.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-tariff {
+    background-image: url("../img/icon16/sip-tariff.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sip-tariff-off {
+    background-image: url("../img/icon16/sip-tariff-off.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-speedr-box {
+    background-image: url("../img/icon16/speedr-box.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-grid-tree-node-expanded .icon-app-store-info,
+.icon-app-store-info {
+    background-image: url("../img/icon16/store-info.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-smart {
+    background-image: url("../img/icon16/smart.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sniffer {
+    background-image: url("../img/icon16/sniffer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sniffers {
+    background-image: url("../img/icon16/sniffers.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats {
+    background-image: url("../img/icon16/stats.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-stats-cpu {
+    background-image: url("../img/icon16/stats-cpu.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-disk {
+    background-image: url("../img/icon16/stats-disk.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-dns {
+    background-image: url("../img/icon16/stats-dns.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-memory {
+    background-image: url("../img/icon16/stats-memory.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-http {
+    background-image: url("../img/icon16/stats-http.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-net {
+    background-image: url("../img/icon16/stats-net.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-server {
+    background-image: url("../img/icon16/stats-server.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-client-network {
+    background-image: url("../img/icon16/stats-client-network.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-star-green {
+    background-image: url("../img/icon16/star-green.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-star-silver {
+    background-image: url("../img/icon16/star-silver.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-pie {
+    background-image: url("../img/icon16/stats-pie.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-service-order,
+.icon-app-service-order {
+    background-image: url("../img/icon16/service-order.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-staff,
+.icon-app-staff {
+    background-image: url("../img/icon16/staff.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-categories {
+    background-image: url("../img/icon16/stats-categories.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-clients {
+    background-image: url("../img/icon16/stats-clients.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stats-toplevel {
+    background-image: url("../img/icon16/stats-toplevel.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-stock-category {
+    background-image: url("../img/icon16/stock-category.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stock-control {
+    background-image: url("../img/icon16/stock-control.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stock-control-report {
+    background-image: url("../img/icon16/stock-control-report.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stock-discovery {
+    background-image: url("../img/icon16/stock-discovery.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stock-model {
+    background-image: url("../img/icon16/stock-model.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stock-product {
+    background-image: url("../img/icon16/stock-product.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stock-storage {
+    background-image: url("../img/icon16/stock-storage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stock-user {
+    background-image: url("../img/icon16/stock-user.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-storage {
+    background-image: url("../img/icon16/storage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-storage-out {
+    background-image: url("../img/icon16/storage-out.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-stored {
+    background-image: url("../img/icon16/stored.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-support,
+.icon-app-support {
+    background-image: url("../img/icon16/support.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-supplier {
+    background-image: url("../img/icon16/supplier.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-sync {
+    background-image: url("../img/icon16/sync.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-tables {
+    background-image: url("../img/icon16/tables.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-tables-l3 {
+    background-image: url("../img/icon16/tables-l3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-tables-l7 {
+    background-image: url("../img/icon16/tables-l7.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-task {
+    background-image: url("../img/icon16/task.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-ticket,
+.icon-app-ticket {
+    background-image: url("../img/icon16/ticket.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-ticket-report {
+    background-image: url("../img/icon16/ticket-report.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-tile {
+    background-image: url("../img/icon16/tile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-time {
+    background-image: url("../img/icon16/time.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-timer-pizza {
+    background-image: url("../img/icon16/timer-pizza.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-torrent {
+    background-image: url("../img/icon16/bittorrent.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-temp-normal {
+    background-image: url("../img/icon16/temp-normal.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-unlock {
+    background-image: url("../img/icon16/unlock.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-updates,
+.icon-app-updates {
+    background-image: url("../img/icon16/updates.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-upload {
+    background-image: url("../img/icon16/upload.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-users {
+    background-image: url("../img/icon16/users.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .icon-app-user-busy,
+.icon-app-user-busy {
+    background-image: url("../img/icon16/user-busy.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-users-on {
+    background-image: url("../img/icon16/users-on.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-user-on {
+    background-image: url("../img/icon16/user-on.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-user-config {
+    background-image: url("../img/icon16/user-config.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-wifi {
+    background-image: url("../img/icon16/wifi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-voucher,
+.icon-app-voucher {
+    background-image: url("../img/icon16/voucher.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-pending-aborted,
+.icon-app-pending-aborted {
+    background-image: url("../img/icon16/dot-gray.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-pending-hit,
+.icon-app-pending-hit {
+    background-image: url("../img/icon16/dot-green.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-app-pending-miss,
+.icon-app-pending-miss {
+    background-image: url("../img/icon16/dot-yellow.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-wizard {
+    background-image: url("../img/icon16/wizard.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-grid-tree-node-expanded img.port,
+.x-tree-lines img.port {
+    width: 16px;
+    background-image: url("../img/icon16/port.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.bios {
+    width: 16px;
+    background-image: url("../img/icon16/bios.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-grid-tree-node-expanded img.bios {
+    background-image: url("../img/icon16/bios.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.processor {
+    width: 16px;
+    background-image: url("../img/icon16/processor.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-grid-tree-node-expanded img.processor {
+    background-image: url("../img/icon16/processor.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.memory,
+.icon-app-memory {
+    width: 16px;
+    background-image: url("../img/icon16/memory.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-grid-tree-node-expanded img.memory {
+    background-image: url("../img/icon16/memory.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.video,
+.icon-app-video {
+    width: 16px;
+    background-image: url("../img/mime/mime-video.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-grid-tree-node-expanded img.video {
+    background-image: url("../img/mime/mime-video.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.temperature,
+.icon-app-temperature {
+    width: 16px;
+    background-image: url("../img/icon16/temp-normal.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-grid-tree-node-expanded img.temperature {
+    background-image: url("../img/icon16/temp-normal.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-app-nw-arp {
+    width: 16px;
+    background-image: url("../img/icon16/nw-arp.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-nw-route {
+    width: 16px;
+    background-image: url("../img/icon16/nw-route.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-nw-iface {
+    width: 16px;
+    background-image: url("../img/icon16/nw-iface.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-app-nw-ip-addr {
+    width: 16px;
+    background-image: url("../img/icon16/nw-ip-addr.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.icon-app-bridge,
+.x-grid-tree-node-expanded img.icon-app-bridge,
+.x-menu-item .icon-app-bridge,
+.icon-app-bridge {
+    width: 16px;
+    background-image: url("../img/icon16/nw-bridge.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.icon-app-vlan,
+.x-grid-tree-node-expanded img.icon-app-vlan,
+.x-menu-item .icon-app-vlan,
+.icon-app-vlan {
+    width: 16px;
+    background-image: url("../img/icon16/nw-vlan.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.icon-app-ethernet,
+.x-tree-lines img.ethernet,
+.x-grid-tree-node-expanded img.icon-app-ethernet,
+.x-grid-tree-node-expanded img.ethernet,
+.x-menu-item .icon-app-ethernet,
+.icon-app-ethernet {
+    width: 16px;
+    background-image: url("../img/icon16/nw-ether.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dot-icon {
+    width: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dot-blue {
+    width: 16px;
+    background-image: url("../img/icon16/dot-blue.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dot-gray {
+    width: 16px;
+    background-image: url("../img/icon16/dot-gray.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dot-grey {
+    width: 16px;
+    background-image: url("../img/icon16/dot-gray.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dot-green {
+    width: 16px;
+    background-image: url("../img/icon16/dot-green.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dot-light {
+    width: 16px;
+    background-image: url("../img/icon16/dot-light.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dot-red {
+    width: 16px;
+    background-image: url("../img/icon16/dot-red.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dot-yellow {
+    width: 16px;
+    background-image: url("../img/icon16/dot-yellow.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dot-orange {
+    width: 16px;
+    background-image: url("../img/icon16/dot-orange.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.dot-purple {
+    width: 16px;
+    background-image: url("../img/icon16/dot-purple.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* .dot-icon.x-grid-cell {
+  background-repeat: no-repeat;
+  background-position: 0px center;
+}
+.dot-icon .x-grid-cell-inner {
+  background-repeat: no-repeat;
+  background-position: 0px center !important;
+  padding-left: 20px;
+}
+.dot-icon-gray .x-grid-cell-inner {
+  background-image: url("../img/icon16/dot-gray.png");
+  background-position: 2px center;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+} */
+
+.icon-oper-claro {
+    background-image: url("../img/icon16/oper-claro.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-oper-ctbc {
+    background-image: url("../img/icon16/oper-ctbc.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-oper-gvt {
+    background-image: url("../img/icon16/oper-gvt.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-oper-oi {
+    background-image: url("../img/icon16/oper-oi.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-oper-tim {
+    background-image: url("../img/icon16/oper-tim.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-oper-vivo {
+    background-image: url("../img/icon16/oper-vivo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-radio {
+    background-image: url("../img/icon16/icon-radio.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-router {
+    background-image: url("../img/icon16/icon-router.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-link {
+    background-image: url("../img/icon16/icon-link.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.x-tree-lines img.icon-dev-disk,
+.x-grid-tree-node-expanded img.icon-dev-disk,
+.x-menu-item .icon-dev-disk,
+.icon-dev-disk {
+    background-image: url("../img/icon16/storage.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-tree-lines img.icon-dev-scsi,
+.x-grid-tree-node-expanded img.icon-dev-scsi,
+.x-menu-item .icon-dev-scsi,
+.icon-dev-scsi {
+    background-image: url("../img/icon16/storage2.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.x-menu-item img.icon-device-mikrotik,
+.icon-device-mikrotik {
+    background-image: url("../img/icon16/device-mikrotik.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-device-cisco,
+.icon-device-cisco {
+    background-image: url("../img/icon16/device-cisco.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-device-huawei,
+.icon-device-huawei {
+    background-image: url("../img/icon16/device-huawei.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-device-ubiquiti,
+.icon-device-ubiquiti {
+    background-image: url("../img/icon16/device-ubiquiti.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-device-accel-ppp,
+.icon-device-accel-ppp {
+    background-image: url("../img/icon16/device-accel-ppp.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-device-intelbras,
+.icon-device-intelbras {
+    background-image: url("../img/icon16/device-intelbras.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-device-motorola,
+.icon-device-motorola {
+    background-image: url("../img/icon16/device-motorola.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item img.icon-device-vyos,
+.icon-device-vyos {
+    background-image: url("../img/icon16/device-vyos.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* banks */
+.icon-bank-000 {
+    background-image: url("../img/icon16/bank-000.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-001 {
+    background-image: url("../img/icon16/bank-001.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-033 {
+    background-image: url("../img/icon16/bank-033.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-085 {
+    background-image: url("../img/icon16/bank-085.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-104 {
+    background-image: url("../img/icon16/bank-104.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-237 {
+    background-image: url("../img/icon16/bank-237.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-341 {
+    background-image: url("../img/icon16/bank-341.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-637 {
+    background-image: url("../img/icon16/bank-637.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-748 {
+    background-image: url("../img/icon16/bank-748.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-756 {
+    background-image: url("../img/icon16/bank-756.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-gerencianet {
+    background-image: url("../img/icon16/bank-gerencianet.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-gerencianet-old {
+    background-image: url("../img/icon16/bank-gerencianet-old.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-cielo {
+    background-image: url("../img/icon16/bank-cielo.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-juno {
+    background-image: url("../img/icon16/bank-juno.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-safe2pay {
+    background-image: url("../img/icon16/bank-safe2pay.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.icon-bank-galaxpay {
+    background-image: url("../img/icon16/bank-galaxpay.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.desk-app-captor {
+    background-image: url("../img/icon48/captor.png");
+}
+.desk-app-controllr {
+    background-image: url("../img/icon48/controllr.png");
+}
+.desk-app-control {
+    background-image: url("../img/icon48/control.png");
+}
+.desk-app-freebrs {
+    background-image: url("../img/icon48/freebrs.png");
+}
+.desk-app-probrs {
+    background-image: url("../img/icon48/probrs.png");
+}
+.desk-app-brbos {
+    background-image: url("../img/icon48/brbos.png");
+}
+.desk-app-linkr {
+    background-image: url("../img/icon48/linkr.png");
+}
+.desk-app-speedr {
+    background-image: url("../img/icon48/speedr.png");
+}
+.desk-app-voipr {
+    background-image: url("../img/icon48/voipr.png");
+}
+.desk-app-border {
+    background-image: url("../img/icon48/border.png");
+}
+.desk-app-brbyte {
+    background-image: url("../img/icon48/brbyte.png");
+}
+.desk-app-brbyte-soft {
+    background-image: url("../img/icon48/brbyte-soft.png");
+}
+
+.desk-app-accesslog {
+    background-image: url("../img/icon48/accesslog.png");
+}
+.desk-app-acl-cadastre {
+    background-image: url("../img/icon48/acl-cadastre.png");
+}
+.desk-app-acl-category {
+    background-image: url("../img/icon48/acl-category.png");
+}
+.desk-app-acl-client {
+    background-image: url("../img/icon48/acl-client.png");
+}
+.desk-app-acl-interest {
+    background-image: url("../img/icon48/acl-interest.png");
+}
+.desk-app-acl-postit {
+    background-image: url("../img/icon48/acl-postit.png");
+}
+.desk-app-acl-role {
+    background-image: url("../img/icon48/acl-role.png");
+}
+.desk-app-acl-users {
+    background-image: url("../img/icon48/acl-users.png");
+}
+.desk-app-acl-users-online {
+    background-image: url("../img/icon48/acl-users-online.png");
+}
+.desk-app-arq-system {
+    background-image: url("../img/icon48/arq-system.png");
+}
+.desk-app-arq-version {
+    background-image: url("../img/icon48/arq-version.png");
+}
+.desk-app-arq-file {
+    background-image: url("../img/icon48/arq-file.png");
+}
+.desk-app-attributes {
+    background-image: url("../img/icon48/attributes.png");
+}
+.desk-app-alert {
+    background-image: url("../img/icon48/alert.png");
+}
+.desk-app-audio {
+    background-image: url("../img/icon48/audio.png");
+}
+
+.desk-app-backup {
+    background-image: url("../img/icon48/backup.png");
+}
+.desk-app-bank {
+    background-image: url("../img/icon48/bank.png");
+}
+
+.desk-app-cache {
+    background-image: url("../img/icon48/cache.png");
+}
+.desk-app-calls {
+    background-image: url("../img/icon48/calls.png");
+}
+.desk-app-cascate {
+    background-image: url("../img/icon48/cascate.png");
+}
+.desk-app-certificate {
+    background-image: url("../img/icon48/certificate.png");
+}
+.desk-app-certificate-red {
+    background-image: url("../img/icon48/certificate-red.png");
+}
+.desk-app-checked {
+    background-image: url("../img/icon48/checked.png");
+}
+.desk-app-clients {
+    background-image: url("../img/icon48/clients.png");
+}
+.desk-app-commercial-report {
+    background-image: url("../img/icon48/commercial-report.png");
+}
+.desk-app-connections {
+    background-image: url("../img/icon48/connections.png");
+}
+.desk-app-config {
+    background-image: url("../img/icon48/config.png");
+}
+.desk-app-coredump {
+    background-image: url("../img/icon48/coredump.png");
+}
+.desk-app-coupon {
+    background-image: url("../img/icon48/coupon.png");
+}
+.desk-app-contract {
+    background-image: url("../img/icon48/contract.png");
+}
+.desk-app-co-profile {
+    background-image: url("../img/icon48/co-profile.png");
+}
+.desk-app-cpe-mac {
+    background-image: url("../img/icon48/cpe-mac.png");
+}
+
+.desk-app-dashboard {
+    background-image: url("../img/icon48/dashboard.png");
+}
+.desk-app-devices {
+    background-image: url("../img/icon48/devices.png");
+}
+.desk-app-dp {
+    background-image: url("../img/icon48/dp.png");
+}
+.desk-app-ds {
+    background-image: url("../img/icon48/ds.png");
+}
+.desk-app-equipment {
+    background-image: url("../img/icon48/equipment.png");
+}
+.desk-app-fiber {
+    background-image: url("../img/icon48/fiber.png");
+}
+.desk-app-dev-group {
+    background-image: url("../img/icon48/dev-group.png");
+}
+.desk-app-dev-sms {
+    background-image: url("../img/icon48/dev-sms.png");
+}
+.desk-app-dev-sms-campaign {
+    background-image: url("../img/icon48/dev-sms-campaign.png");
+}
+.desk-app-dns {
+    background-image: url("../img/icon48/dns.png");
+}
+.desk-app-dns-acl {
+    background-image: url("../img/icon48/dns-acl.png");
+}
+.desk-app-dns-cache {
+    background-image: url("../img/icon48/dns-cache.png");
+}
+.desk-app-dns-config {
+    background-image: url("../img/icon48/dns-config.png");
+}
+.desk-app-dns-error {
+    background-image: url("../img/icon48/dns-error.png");
+}
+.desk-app-dns-fwd {
+    background-image: url("../img/icon48/dns-fwd.png");
+}
+.desk-app-dns-root {
+    background-image: url("../img/icon48/dns-root.png");
+}
+.desk-app-dns-zone {
+    background-image: url("../img/icon48/dns-zone.png");
+}
+.desk-app-dns-ip-ratelimit {
+    background-image: url("../img/icon48/dns-ip-ratelimit.png");
+}
+.desk-app-drivers {
+    background-image: url("../img/icon48/drivers.png");
+}
+.desk-app-dynasig {
+    background-image: url("../img/icon48/dynasig.png");
+}
+
+.desk-app-filters-l7 {
+    background-image: url("../img/icon48/filters-l7.png");
+}
+.desk-app-filters-l3 {
+    background-image: url("../img/icon48/filters-l3.png");
+}
+.desk-app-file {
+    background-image: url("../img/icon48/arq-file.png");
+}
+.desk-app-financial-campaign {
+    background-image: url("../img/icon48/financial-campaign.png");
+}
+.desk-app-financial-cashflow {
+    background-image: url("../img/icon48/financial-cashflow.png");
+}
+.desk-app-financial-payable {
+    background-image: url("../img/icon48/financial-payable.png");
+}
+.desk-app-financial-check {
+    background-image: url("../img/icon48/financial-check.png");
+}
+.desk-app-financial-treasury {
+    background-image: url("../img/icon48/financial-treasury.png");
+}
+
+.desk-app-fleet {
+    background-image: url("../img/icon48/fleet.png");
+}
+.desk-app-fleet-vehicle {
+    background-image: url("../img/icon48/fleet-vehicle.png");
+}
+.desk-app-fleet-manufacturer {
+    background-image: url("../img/icon48/fleet-manufacturer.png");
+}
+.desk-app-fleet-model {
+    background-image: url("../img/icon48/fleet-model.png");
+}
+.desk-app-fleet-odometer {
+    background-image: url("../img/icon48/fleet-odometer.png");
+}
+.desk-app-fleet-maintenance {
+    background-image: url("../img/icon48/fleet-maintenance.png");
+}
+
+.desk-app-flow-collector {
+    background-image: url("../img/icon48/flow-collector.png");
+}
+.desk-app-flow-source {
+    background-image: url("../img/icon48/flow-source.png");
+}
+
+.desk-app-flow-summary-filter {
+    background-image: url("../img/icon48/flow-summary-filter.png");
+}
+.desk-app-flow-summary-ip {
+    background-image: url("../img/icon48/flow-summary-ip.png");
+}
+.desk-app-flow-summary-proto {
+    background-image: url("../img/icon48/flow-summary-proto.png");
+}
+.desk-app-flow-summary-port {
+    background-image: url("../img/icon48/flow-summary-port.png");
+}
+.desk-app-flow-summary-mac {
+    background-image: url("../img/icon48/flow-summary-mac.png");
+}
+
+.desk-app-flow-stats-ip {
+    background-image: url("../img/icon48/flow-stats-ip.png");
+}
+.desk-app-flow-stats-proto {
+    background-image: url("../img/icon48/flow-stats-proto.png");
+}
+.desk-app-flow-stats-port {
+    background-image: url("../img/icon48/flow-stats-port.png");
+}
+.desk-app-flow-stats-mac {
+    background-image: url("../img/icon48/flow-stats-mac.png");
+}
+
+.desk-app-go-back {
+    background-image: url("../img/icon48/go-back.png");
+}
+.desk-app-gerencianet {
+    background-image: url("../img/icon48/gerencianet.png");
+}
+
+.desk-app-hardware {
+    background-image: url("../img/icon48/hardware.png");
+}
+.desk-app-hotsite {
+    background-image: url("../img/icon48/hotsite.png");
+}
+.desk-app-holidays {
+    background-image: url("../img/icon48/holidays.png");
+}
+
+.desk-app-integration {
+    background-image: url("../img/icon48/integration.png");
+}
+.desk-app-intercept {
+    background-image: url("../img/icon48/intercept.png");
+}
+.desk-app-intercept-l3 {
+    background-image: url("../img/icon48/intercept-l3.png");
+}
+.desk-app-intercept-l7 {
+    background-image: url("../img/icon48/intercept-l7.png");
+}
+.desk-app-invoice {
+    background-image: url("../img/icon48/invoice.png");
+}
+.desk-app-invoice-obs {
+    background-image: url("../img/icon48/invoice-obs.png");
+}
+.desk-app-invoice-nf {
+    background-image: url("../img/icon48/invoice-nf.png");
+}
+.desk-app-invoice-nf-pend {
+    background-image: url("../img/icon48/invoice-nf-pend.png");
+}
+.desk-app-invoice-return {
+    background-image: url("../img/icon48/invoice-return.png");
+}
+.desk-app-invoice-remittance {
+    background-image: url("../img/icon48/invoice-remittance.png");
+}
+.desk-app-invoice-report {
+    background-image: url("../img/icon48/invoice-report.png");
+}
+.desk-app-invoice-title {
+    background-image: url("../img/icon48/invoice-title.png");
+}
+.desk-app-ippool {
+    background-image: url("../img/icon48/ippool.png");
+}
+.desk-app-ippool-nw {
+    background-image: url("../img/icon48/ippool-nw.png");
+}
+.desk-app-isp-plan {
+    background-image: url("../img/icon48/isp-plan.png");
+}
+
+.desk-app-license {
+    background-image: url("../img/icon48/license.png");
+}
+.desk-app-license-blue {
+    background-image: url("../img/icon48/license-blue.png");
+}
+.desk-app-license-alert {
+    background-image: url("../img/icon48/license-alert.png");
+}
+.desk-app-license-reg {
+    background-image: url("../img/icon48/license-reg.png");
+}
+.desk-app-license-report {
+    background-image: url("../img/icon48/license-report.png");
+}
+.desk-app-license-stats {
+    background-image: url("../img/icon48/license-stats.png");
+}
+.desk-app-log {
+    background-image: url("../img/icon48/log.png");
+}
+.desk-app-logs {
+    background-image: url("../img/icon48/logs.png");
+}
+.desk-app-lottery-cad {
+    background-image: url("../img/icon48/lottery-cad.png");
+}
+.desk-app-lottery-coupon {
+    background-image: url("../img/icon48/lottery-coupon.png");
+}
+.desk-app-lottery-promo {
+    background-image: url("../img/icon48/lottery-promo.png");
+}
+
+.desk-app-manufacturer {
+    background-image: url("../img/icon48/manufacturer.png");
+}
+.desk-app-mail {
+    background-image: url("../img/icon48/mail.png");
+}
+.desk-app-map-points {
+    background-image: url("../img/icon48/map-points.png");
+}
+.desk-app-mobile {
+    background-image: url("../img/icon48/mobile.png");
+}
+.desk-app-msg {
+    background-image: url("../img/icon48/msg.png");
+}
+.desk-app-multiwans {
+    background-image: url("../img/icon48/multiwans.png");
+}
+
+.desk-app-nw-arp {
+    background-image: url("../img/icon48/nw-arp.png");
+}
+.desk-app-nw-control {
+    background-image: url("../img/icon48/nw-control.png");
+}
+.desk-app-nw-route {
+    background-image: url("../img/icon48/nw-route.png");
+}
+.desk-app-nw-iface {
+    background-image: url("../img/icon48/nw-iface.png");
+}
+.desk-app-nw-ip-addr {
+    background-image: url("../img/icon48/nw-ip-addr.png");
+}
+
+.desk-app-pages-web {
+    background-image: url("../img/icon48/pages-web.png");
+}
+.desk-app-pending {
+    background-image: url("../img/icon48/pending.png");
+}
+.desk-app-pipes {
+    background-image: url("../img/icon48/pipes.png");
+}
+.desk-app-plugins {
+    background-image: url("../img/icon48/plugins.png");
+}
+.desk-app-plugins-control {
+    background-image: url("../img/icon48/plugins-control.png");
+}
+.desk-app-post-category {
+    background-image: url("../img/icon48/post-category.png");
+}
+.desk-app-processor {
+    background-image: url("../img/icon48/processor.png");
+}
+.desk-app-profiles {
+    background-image: url("../img/icon48/profiles.png");
+}
+.desk-app-pppoe-server {
+    background-image: url("../img/icon48/pppoe-server.png");
+}
+.desk-app-pptp-server {
+    background-image: url("../img/icon48/pptp-server.png");
+}
+
+.desk-app-product {
+    background-image: url("../img/icon48/product.png");
+}
+
+.desk-app-office {
+    background-image: url("../img/icon48/office.png");
+}
+
+.desk-app-onu-reg {
+    background-image: url("../img/icon48/onu-reg.png");
+}
+.desk-app-onu-unreg {
+    background-image: url("../img/icon48/onu-unreg.png");
+}
+
+.desk-app-qos {
+    background-image: url("../img/icon48/qos.png");
+}
+.desk-app-qos-l3 {
+    background-image: url("../img/icon48/qos-l3.png");
+}
+.desk-app-qos-l7 {
+    background-image: url("../img/icon48/qos-l7.png");
+}
+
+.desk-app-queues {
+    background-image: url("../img/icon48/queues.png");
+}
+.desk-app-question {
+    background-image: url("../img/icon48/question.png");
+}
+
+.desk-app-reports {
+    background-image: url("../img/icon48/reports.png");
+}
+.desk-app-reports-blue {
+    background-image: url("../img/icon48/reports-blue.png");
+}
+.desk-app-report-phone {
+    background-image: url("../img/icon48/report-phone.png");
+}
+.desk-app-report-mail {
+    background-image: url("../img/icon48/report-mail.png");
+}
+.desk-app-report-address {
+    background-image: url("../img/icon48/report-address.png");
+}
+
+.desk-app-sale {
+    background-image: url("../img/icon48/sale.png");
+}
+
+.desk-app-samplelog {
+    background-image: url("../img/icon48/samplelog.png");
+}
+.desk-app-secrets {
+    background-image: url("../img/icon48/secrets.png");
+}
+.desk-app-sessions {
+    background-image: url("../img/icon48/sessions.png");
+}
+.desk-app-server {
+    background-image: url("../img/icon48/server.png");
+}
+.desk-app-sip-branch {
+    background-image: url("../img/icon48/branch.png");
+}
+.desk-app-sip-gateway {
+    background-image: url("../img/icon48/sip-gateway.png");
+}
+.desk-app-sip-gateway-warn {
+    background-image: url("../img/icon48/sip-gateway-warn.png");
+}
+.desk-app-sip-group {
+    background-image: url("../img/icon48/sip-group.png");
+}
+.desk-app-svc-redirect {
+    background-image: url("../img/icon48/svc-redirect.png");
+}
+.desk-app-sip-registration {
+    background-image: url("../img/icon48/sip-registration.png");
+}
+.desk-app-sip-server {
+    background-image: url("../img/icon48/sip-server.png");
+}
+.desk-app-stock-category {
+    background-image: url("../img/icon48/stock-category.png");
+}
+.desk-app-stock-control {
+    background-image: url("../img/icon48/stock-control.png");
+}
+.desk-app-stock-control-report {
+    background-image: url("../img/icon48/stock-control-report.png");
+}
+.desk-app-stock-discovery {
+    background-image: url("../img/icon48/stock-discovery.png");
+}
+.desk-app-stock-model {
+    background-image: url("../img/icon48/stock-model.png");
+}
+.desk-app-stock-product {
+    background-image: url("../img/icon48/stock-product.png");
+}
+.desk-app-stock-storage {
+    background-image: url("../img/icon48/stock-storage.png");
+}
+.desk-app-stock-user {
+    background-image: url("../img/icon48/stock-user.png");
+}
+.desk-app-svc-route {
+    background-image: url("../img/icon48/svc-route.png");
+}
+.desk-app-svc-ivr {
+    background-image: url("../img/icon48/svc-ivr.png");
+}
+.desk-app-svc-cc {
+    background-image: url("../img/icon48/svc-cc.png");
+}
+.desk-app-svc-cc-agent {
+    background-image: url("../img/icon48/svc-cc-agent.png");
+}
+.desk-app-svc-cc-queue {
+    background-image: url("../img/icon48/svc-cc-queue.png");
+}
+
+.desk-app-sip-dialogs {
+    background-image: url("../img/icon48/sip-dialogs.png");
+}
+.desk-app-sip-plan {
+    background-image: url("../img/icon48/sip-plan.png");
+}
+.desk-app-sip-prefix {
+    background-image: url("../img/icon48/sip-prefix.png");
+}
+.desk-app-sip-tariff {
+    background-image: url("../img/icon48/sip-tariff.png");
+}
+
+.desk-app-sniffers {
+    background-image: url("../img/icon48/sniffers.png");
+}
+.desk-app-storage {
+    background-image: url("../img/icon48/storage.png");
+}
+.desk-app-stored {
+    background-image: url("../img/icon48/stored.png");
+}
+.desk-app-stats-cpu {
+    background-image: url("../img/icon48/stats-cpu.png");
+}
+.desk-app-staff {
+    background-image: url("../img/icon48/staff.png");
+}
+.desk-app-stats-disk {
+    background-image: url("../img/icon48/stats-disk.png");
+}
+.desk-app-stats-dns {
+    background-image: url("../img/icon48/stats-dns.png");
+}
+.desk-app-stats-http {
+    background-image: url("../img/icon48/stats-http.png");
+}
+.desk-app-stats-net {
+    background-image: url("../img/icon48/stats-net.png");
+}
+.desk-app-stats-memory {
+    background-image: url("../img/icon48/stats-memory.png");
+}
+.desk-app-stats-categories {
+    background-image: url("../img/icon48/stats-categories.png");
+}
+.desk-app-stats-clients {
+    background-image: url("../img/icon48/stats-clients.png");
+}
+.desk-app-stats-toplevel {
+    background-image: url("../img/icon48/stats-toplevel.png");
+}
+.desk-app-stats-server {
+    background-image: url("../img/icon48/stats-server.png");
+}
+.desk-app-stats-client-network {
+    background-image: url("../img/icon48/stats-client-network.png");
+}
+
+.desk-app-storage {
+    background-image: url("../img/icon48/storage.png");
+}
+.desk-app-stored {
+    background-image: url("../img/icon48/stored.png");
+}
+.desk-app-store-info {
+    background-image: url("../img/icon48/store-info.png");
+}
+.desk-app-service-order {
+    background-image: url("../img/icon48/service-order.png");
+}
+.desk-app-support {
+    background-image: url("../img/icon48/support.png");
+}
+.desk-app-supplier {
+    background-image: url("../img/icon48/supplier.png");
+}
+
+.desk-app-tables {
+    background-image: url("../img/icon48/tables.png");
+}
+.desk-app-tables-l3 {
+    background-image: url("../img/icon48/tables-l3.png");
+}
+.desk-app-tables-l7 {
+    background-image: url("../img/icon48/tables-l7.png");
+}
+.desk-app-task {
+    background-image: url("../img/icon48/task.png");
+}
+.desk-app-ticket {
+    background-image: url("../img/icon48/ticket.png");
+}
+.desk-app-ticket-report {
+    background-image: url("../img/icon48/ticket-report.png");
+}
+.desk-app-time {
+    background-image: url("../img/icon48/time.png");
+}
+
+.desk-app-translate {
+    background-image: url("../img/icon48/translate.png");
+}
+.desk-app-treasury {
+    background-image: url("../img/icon48/treasury.png");
+}
+
+.desk-app-updates {
+    background-image: url("../img/icon48/updates.png");
+}
+
+.desk-app-valid {
+    background-image: url("../img/icon48/valid.png");
+}
+.desk-app-voucher {
+    background-image: url("../img/icon48/voucher.png");
+}
+
+.desk-app-wifi {
+    background-image: url("../img/icon48/wifi.png");
+}
+.x-menu-item .direction-d_0,
+.direction-d_0 {
+    width: 16px;
+    background-image: url("../img/icon16/arrow-down-gray.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .direction-d_1,
+.direction-d_1 {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-down-green.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .direction-d_2,
+.direction-d_2 {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-down-yellow.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .direction-d_3,
+.direction-d_3 {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-down-red.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .direction-u_0,
+.direction-u_0 {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-up-gray.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .direction-u_1,
+.direction-u_1 {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-up-green.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .direction-u_2,
+.direction-u_2 {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-up-yellow.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .direction-u_3,
+.direction-u_3 {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-up-red.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .direction-l,
+.direction-l {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-l.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.x-menu-item .direction-r,
+.direction-r {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-r.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.direction-down-frag {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-down-frag.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.direction-up-frag {
+    width: 14px;
+    background-image: url("../img/icon16/arrow-up-frag.png") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.i-left {
+    background-position: 1px 2px;
+}
+
+.check-exclamation input {
+    background-image: url("../img/icon16/app-check.gif") !important;
+    height: 13px;
+    width: 13px;
+}
+
+.check-exclamation img {
+    background-image: url("../img/icon16/app-check.gif") !important;
+    height: 13px;
+    width: 13px;
+}
+
+.icon-hd-fail {
+    background: url("../img/icon64/hd-fail.png") no-repeat 0px 0px;
+}
+.icon-hd-prefail {
+    background: url("../img/icon64/hd-prefail.png") no-repeat 0px 0px;
+}
+.icon-hd-system {
+    background: url("../img/icon64/hd-sys.png") no-repeat 0px 0px;
+}
+.icon-hd-system-fail {
+    background: url("../img/icon64/hd-sys-fail.png") no-repeat 0px 0px;
+}
+.icon-hd-system-prefail {
+    background: url("../img/icon64/hd-sys-prefail.png") no-repeat 0px 0px;
+}
+.icon-mem-ram {
+    background: url("../img/icon64/mem-ram.png") no-repeat 0px 0px;
+}

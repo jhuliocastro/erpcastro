@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html, body{
+    background-image: url('/img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.card{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.actions{
+    margin-right: 5px;
+}
+
+.window-action{
+    display: none;
+    background-color: #f5f5f5;
+    -webkit-box-shadow: -9px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -9px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: -9px 0px 5px 0px rgba(0,0,0,0.75);
+    width: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.window-action-header{
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid white;
+}
+
+.window-action-body{
+    padding: 10px;
+}
+
+.window-action-footer{
+    padding: 10px;
+    border-top: 2px solid white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    align-items: end;
+}
