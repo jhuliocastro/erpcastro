@@ -23,6 +23,8 @@ Route::middleware('auth')->group(function(){
         Route::prefix('products')->group(function(){
             Route::get('/', [Products::class, 'index'])->name('products');
             Route::post('/store', [Products::class, 'store'])->name('products.store');
+            Route::get('/table', [Products::class, 'table'])->name('products.table');
+            Route::post('/delete', [Products::class, 'delete'])->name('products.delete');
         });
     });
 

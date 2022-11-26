@@ -8,8 +8,48 @@ use Illuminate\Http\Request;
 
 class Products extends Controller
 {
+    /**
+     * Visualization of products
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
     public function index(){
         return view('Home.Products.index');
+    }
+
+    public function table(){
+        $list = ProductsModel::getProducts();
+        $table["data"] = [];
+        foreach($list as $product){
+            $action = "
+                <span class='action-table' onclick=\"deleteProduct('$product->id')\"><i class='fa-solid fa-trash'></i></span>
+            ";
+
+            $table["data"][] = [
+                $product->codebar,
+                $product->name,
+                $product->price_purchase,
+                $product->price_sale,
+                $product->inventory,
+                $product->unit,
+                $action
+            ];
+        }
+
+        return json_encode($table);
+    }
+
+    public function delete(Request $request){
+        $return = ProductsModel::deleteProduct($request->product);
+        if($return){
+            return json_encode([
+                'status' => true,
+            ]);
+        }else{
+            return json_encode([
+                'status' => false,
+                'message' => 'Erro ao deletar produto'
+            ]);
+        }
     }
 
     public function store(Request $request){

@@ -51,3 +51,7 @@ html, body{
     text-align: right;
     align-items: end;
 }
+
+.action-table{
+    cursor: pointer;
+}

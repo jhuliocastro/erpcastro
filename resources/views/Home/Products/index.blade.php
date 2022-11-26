@@ -15,18 +15,19 @@
                 </div>
             </div>
             <div class="card-content">
-                <table id="table_products" class="display compact" style="width: 100%;">
+                <table id="table_products" class="table is-striped" style="width: 100%;">
                     <thead>
                         <tr>
-                            <td>ID</td>
-                            <td>Código Barras</td>
-                            <td>Produto</td>
-                            <td>Preço Venda</td>
-                            <td>Estoque Atual</td>
-                            <td>Tipo</td>
-                            <td>Ações</td>
+                            <th>Código Barras</th>
+                            <th>Produto</th>
+                            <th>Preço Compra</th>
+                            <th>Preço Venda</th>
+                            <th>Estoque</th>
+                            <th>Tipo</th>
+                            <th>Ações</th>
                         </tr>
                     </thead>
+                    <tbody></tbody>
                 </table>
             </div>
         </div>
@@ -103,15 +104,47 @@
         $(document).ready( function () {
             table = $('#table_products').DataTable({
                 "paging": true,
+                "ajax": "{{route('products.table')}}",
                 dom: 'Bfrtip',
                 "language": {
                     "url": "//cdn.datatables.net/plug-ins/1.11.5/i18n/pt-BR.json"
-                },
-                buttons: [
-                    'copy', 'excel', 'pdf'
-                ]
+                }
             });
         });
+
+        function deleteProduct(id) {
+            iziToast.question({
+                title: 'Deseja deletar o produto?',
+                message: 'Essa ação não tem volta',
+                buttons: [
+                    ['<button><b>Sim</b></button>', function (instance, toast) {
+                        instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
+                        axios.post("{{route('products.delete')}}", {
+                            product: id
+                        }).then(function(response){
+                            if(response.data.status === true){
+                                table.ajax.reload();
+                                iziToast.success({
+                                    message: 'Produto deletado'
+                                });
+                            }else{
+                                iziToast.error({
+                                    message: response.data.message
+                                });
+                            }
+                        }).catch(function(response){
+                            iziToast.error({
+                                title: 'Erro ao deletar produto',
+                                message: 'Contate o administrador do sistema'
+                            });
+                        });
+                    }, true],
+                    ['<button>Não</button>', function (instance, toast) {
+                        instance.hide({ transitionOut: 'fadeOut' }, toast, 'button');
+                    }],
+                ],
+            });
+        }
 
         $("#btnRegister").click(function(){
             $(".window-action").fadeIn();
@@ -141,6 +174,7 @@
                 }else{
                     $("#form-add-product input").val("");
                     $(".window-action").fadeOut();
+                    table.ajax.reload();
                     iziToast.success({
                         message: 'Produto cadastrado com sucesso'
                     });
