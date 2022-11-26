@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function(){
             Route::post('/store', [Products::class, 'store'])->name('products.store');
             Route::get('/table', [Products::class, 'table'])->name('products.table');
             Route::post('/delete', [Products::class, 'delete'])->name('products.delete');
+            Route::post('/inventory/add', [Products::class, 'addInventory'])->name('products.inventory.add');
         });
     });
 

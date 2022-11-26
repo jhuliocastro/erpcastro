@@ -112,6 +112,43 @@
             });
         });
 
+        function addInventory(id, nameProduct){
+            Swal.fire({
+                title: 'Adicionar estoque',
+                text: nameProduct,
+                input: 'text'
+            }).then(function(response){
+                if(response.isConfirmed === true){
+                    if(response.value > 0){
+                        axios.post("{{route('products.inventory.add')}}", {
+                            id: id,
+                            amount: response.value
+                        }).then(function(response){
+                            if(response.data.status === true){
+                                table.ajax.reload();
+                                iziToast.success({
+                                    message: 'Estoque Atualizado'
+                                });
+                            }else{
+                                iziToast.error({
+                                    message: response.data.message
+                                });
+                            }
+                        }).catch(function(response){
+                            iziToast.error({
+                                title: 'Erro ao alterar estoque',
+                                message: 'Contate o administrador do sistema'
+                            });
+                        });
+                    }else{
+                        iziToast.error({
+                           title: 'Valor deve ser maior que 0'
+                        });
+                    }
+                }
+            });
+        }
+
         function deleteProduct(id) {
             iziToast.question({
                 title: 'Deseja deletar o produto?',

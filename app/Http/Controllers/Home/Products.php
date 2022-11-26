@@ -21,14 +21,16 @@ class Products extends Controller
         $table["data"] = [];
         foreach($list as $product){
             $action = "
+                <span class='action-table' onclick=\"addInventory('$product->id', '$product->name')\"><i class='fa-solid fa-cart-plus'></i></span>
+                <span class='action-table' onclick=\"deleteProduct('$product->id')\"><i class='fa-solid fa-cart-arrow-down'></i></span>
                 <span class='action-table' onclick=\"deleteProduct('$product->id')\"><i class='fa-solid fa-trash'></i></span>
             ";
 
             $table["data"][] = [
                 $product->codebar,
                 $product->name,
-                $product->price_purchase,
-                $product->price_sale,
+                "R$ ".number_format($product->price_purchase, 2, ',', '.'),
+                "R$ ".number_format($product->price_sale, 2, ',', '.'),
                 $product->inventory,
                 $product->unit,
                 $action
@@ -36,6 +38,22 @@ class Products extends Controller
         }
 
         return json_encode($table);
+    }
+
+    public function addInventory(Request $request){
+        $inventoryNow = ProductsModel::getProductByID($request->id);
+        $newInventory = $inventoryNow[0]->inventory + $request->amount;
+        $return = ProductsModel::updateInventory($request->id, $newInventory);
+        if($return){
+            return json_encode([
+                'status' => true,
+            ]);
+        }else{
+            return json_encode([
+                'status' => false,
+                'message' => 'Erro ao deletar produto'
+            ]);
+        }
     }
 
     public function delete(Request $request){
