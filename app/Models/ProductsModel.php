@@ -56,4 +56,14 @@ class ProductsModel extends Model
     public static function getProducts(){
         return ProductsModel::all();
     }
+
+    public static function getProductByID($id){
+        return ProductsModel::where('_id', $id)->get();
+    }
+
+    public static function updateAmount($id, $amount){
+        return ProductsModel::where('_id', $id)->update([
+            'inventory' => $amount
+        ]);
+    }
 }

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\HistoryProductModel;
 use App\Models\ProductsModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Products extends Controller
 {
@@ -21,6 +23,7 @@ class Products extends Controller
         $table["data"] = [];
         foreach($list as $product){
             $action = "
+                <span class='action-table' onclick=\"addInventory('$product->id')\"><i class='fa-solid fa-cart-plus'></i></span>
                 <span class='action-table' onclick=\"deleteProduct('$product->id')\"><i class='fa-solid fa-trash'></i></span>
             ";
 
@@ -36,6 +39,36 @@ class Products extends Controller
         }
 
         return json_encode($table);
+    }
+
+    public function inventoryAdd(Request $request){
+        $product = ProductsModel::getProductByID($request->id_product);
+        $amountNew = $product[0]->inventory + $request->amount;
+        $return = ProductsModel::updateAmount($request->id_product, $amountNew);
+        if($return){
+            $data = [
+                'product' => $request->id_product,
+                'amount' => $request->amount,
+                'action' => 'add',
+                'user' => Auth::user()->id
+            ];
+            $return = HistoryProductModel::store($data);
+            if($return){
+                return json_encode([
+                    'status' => true
+                ]);
+            }else{
+                return json_encode([
+                    'status' => false,
+                    'message' => 'Erro ao registrar histórico de estoque'
+                ]);
+            }
+        }else{
+            return json_encode([
+                'status' => false,
+                'message' => 'Erro ao alterar estoque'
+            ]);
+        }
     }
 
     public function delete(Request $request){
