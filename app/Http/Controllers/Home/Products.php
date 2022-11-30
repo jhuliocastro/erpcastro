@@ -22,7 +22,7 @@ class Products extends Controller
         foreach($list as $product){
             $action = "
                 <span class='action-table' onclick=\"addInventory('$product->id', '$product->name')\"><i class='fa-solid fa-cart-plus'></i></span>
-                <span class='action-table' onclick=\"deleteProduct('$product->id')\"><i class='fa-solid fa-cart-arrow-down'></i></span>
+                <span class='action-table' onclick=\"removeInventory('$product->id', '$product->name')\"><i class='fa-solid fa-cart-arrow-down'></i></span>
                 <span class='action-table' onclick=\"deleteProduct('$product->id')\"><i class='fa-solid fa-trash'></i></span>
             ";
 

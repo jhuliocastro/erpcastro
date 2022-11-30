@@ -135,12 +135,63 @@
                             id: id,
                             amount: result.value
                         }).then(function (response){
-                            table.ajax.reload();
-                            iziToast.success({
-                                message: 'Estoque alterado'
-                            });
+                            if(response.data.status === true){
+                                table.ajax.reload();
+                                iziToast.success({
+                                    message: 'Estoque alterado'
+                                });
+                            }else{
+                                iziToast.error({
+                                    message: response.data.message
+                                });
+                            }
                         }).catch(function (response){
                            console.log(response);
+                            iziToast.error({
+                                title: 'Erro ao alterar estoque',
+                                message: 'Contate o administrador do sistema'
+                            });
+                        });
+                    }
+                }
+            })
+        }
+
+        function removeInventory(id, name){
+            Swal.fire({
+                title: 'Informe a quantidade',
+                text: 'Produto: ' + name,
+                input: 'number',
+                inputAttributes: {
+                    autocapitalize: 'off'
+                },
+                showCancelButton: true,
+                confirmButtonText: 'Remover',
+                cancelButtonText: 'Voltar',
+                showLoaderOnConfirm: true,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    if(result.value <= 0){
+                        iziToast.error({
+                            title: 'Valor tem que ser maior do que 1'
+                        });
+                    }else{
+                        axios.post("{{route('products.inventory.remove')}}", {
+                            id: id,
+                            amount: result.value
+                        }).then(function (response){
+                            if(response.data.status === true){
+                                table.ajax.reload();
+                                iziToast.success({
+                                    message: 'Estoque alterado'
+                                });
+                            }else{
+                                iziToast.error({
+                                    message: response.data.message
+                                });
+                            }
+                        }).catch(function (response){
+                            console.log(response);
                             iziToast.error({
                                 title: 'Erro ao alterar estoque',
                                 message: 'Contate o administrador do sistema'
