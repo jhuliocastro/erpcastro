@@ -112,38 +112,41 @@
             });
         });
 
-        function addInventory(id){
+        function addInventory(id, name){
             Swal.fire({
-               title: 'Informe a quantidade para adicionar',
-                input: 'number'
+                title: 'Informe a quantidade',
+                text: 'Produto: ' + name,
+                input: 'number',
+                inputAttributes: {
+                    autocapitalize: 'off'
+                },
+                showCancelButton: true,
+                confirmButtonText: 'Adicionar',
+                cancelButtonText: 'Voltar',
+                showLoaderOnConfirm: true,
             }).then((result) => {
-                if(result.value <= 0){
-                    iziToast.error({
-                       title: 'Valor tem que ser maior que 0',
-                       message: 'Tente novamente'
-                    });
-                }else{
-                    axios.post("{{route('products.inventory.add')}}", {
-                        id_product: id,
-                        amount: result.value
-                    }).then(function (response){
-                        if(response.data.status === true){
+                if (result.isConfirmed) {
+                    if(result.value <= 0){
+                        iziToast.error({
+                            title: 'Valor tem que ser maior do que 1'
+                        });
+                    }else{
+                        axios.post("{{route('products.inventory.add')}}", {
+                            id: id,
+                            amount: result.value
+                        }).then(function (response){
                             table.ajax.reload();
                             iziToast.success({
                                 message: 'Estoque alterado'
                             });
-                        }else{
+                        }).catch(function (response){
+                           console.log(response);
                             iziToast.error({
-                                message: response.data.message
+                                title: 'Erro ao alterar estoque',
+                                message: 'Contate o administrador do sistema'
                             });
-                        }
-                    }).catch(function (response){
-                        console.log(response);
-                        iziToast.error({
-                            title: 'Erro ao alterar estoque',
-                            message: 'Contate o administrador do sistema'
                         });
-                    });
+                    }
                 }
             })
         }
