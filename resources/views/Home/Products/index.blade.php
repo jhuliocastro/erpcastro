@@ -1,7 +1,7 @@
 @extends('Layouts.main')
 
 @section('header')
-
+    <title>UNERP :: Produtos</title>
 @endsection
 @section('content')
     <div class="container-fluid">
@@ -96,6 +96,72 @@
                 </div>
             </form>
         </div>
+
+        <div id="window-edit-product" class="window-action">
+            <form id="form-edit-product">
+                <div class="window-action-header">
+                    Editar Produto
+                </div>
+                <div class="window-action-body">
+                    <div class="field">
+                        <label class="label is-small">Nome do Produto</label>
+                        <div class="control">
+                            <input class="input is-small" type="text" required id="txt-name-product-edit">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label is-small">Unidade de Medida (Até 3 Dígitos)</label>
+                        <div class="control">
+                            <input class="input is-small" type="text" required id="txt-unit-edit" maxlength="3">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label is-small">Valor Compra</label>
+                        <div class="field has-addons">
+                            <div class="control">
+                                <a class="button is-static is-small">
+                                    R$
+                                </a>
+                            </div>
+                            <div class="control is-expanded">
+                                <input class="input is-small" type="text" required id="txt-price-purchase-edit">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label is-small">Valor Venda</label>
+                        <div class="field has-addons">
+                            <div class="control">
+                                <a class="button is-static is-small">
+                                    R$
+                                </a>
+                            </div>
+                            <div class="control is-expanded">
+                                <input class="input is-small" type="text" required id="txt-price-sale-edit">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label is-small">Estoque</label>
+                        <div class="control">
+                            <input class="input is-small" type="number" required id="txt-inventory-edit">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label is-small">Código de Barras</label>
+                        <div class="control">
+                            <input class="input is-small" type="number" required id="txt-codebar-edit">
+                        </div>
+                    </div>
+                </div>
+                <div class="window-action-footer">
+                    <div class="buttons">
+                        <button id="btnCancelEdit" class="button is-small is-dark">Cancelar</button>
+                        <button id="btnSaveEdit" type="submit" class="button is-small is-info">Atualizar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 @endsection
 @section('scripts')
@@ -111,6 +177,26 @@
                 }
             });
         });
+
+        function editProduct(id){
+            axios.post("{{route('products.data.get')}}", {
+                id: id
+            }).then(function (response){
+                $("#txt-name-product-edit").val(response.data.name);
+                $("#txt-unit-edit").val(response.data.unit);
+                $("#txt-price-purchase-edit").val(response.data.price_purchase);
+                $("#txt-price-sale-edit").val(response.data.price_sale);
+                $("#txt-inventory-edit").val(response.data.inventory);
+                $("#txt-codebar-edit").val(response.data.codebar);
+                $("#window-edit-product").fadeIn();
+            }).catch(function (response){
+                console.log(response);
+                iziToast.error({
+                    title: 'Erro ao buscar dados do produto',
+                    message: 'Contate o administrador do sistema'
+                });
+            });
+        }
 
         function addInventory(id, name){
             Swal.fire({
@@ -237,12 +323,20 @@
         }
 
         $("#btnRegister").click(function(){
-            $(".window-action").fadeIn();
+            $("#window-register-product").fadeIn();
             $("#txt-name-product-add").focus();
         });
 
         $("#btnCancelRegister").click(function(){
-           $(".window-action").fadeOut();
+           $("#window-register-product").fadeOut();
+        });
+
+        $("#btnCancelEdit").click(function(){
+            $("#window-edit-product").fadeOut();
+        });
+
+        $("#form-edit-product").submit(function(event){
+           event.preventDefault();
         });
 
         $("#form-add-product").submit(function(event){

@@ -1,6 +1,5 @@
 <html>
     <head>
-        <title></title>
         <!-- STYLES -->
         <link rel="stylesheet" href="{{ asset('css/w2ui.css') }}">
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
@@ -20,6 +19,7 @@
         <script type="text/javascript" src="https://cdn.datatables.net/1.13.1/js/dataTables.bulma.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js" integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        @yield('header')
     </head>
     <body>
         <div id="navbar"></div>

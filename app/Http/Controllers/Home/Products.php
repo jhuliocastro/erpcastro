@@ -21,6 +21,7 @@ class Products extends Controller
         $table["data"] = [];
         foreach($list as $product){
             $action = "
+                <span class='action-table' onclick=\"editProduct('$product->id')\"><i class='fa-solid fa-edit'></i></span>
                 <span class='action-table' onclick=\"addInventory('$product->id', '$product->name')\"><i class='fa-solid fa-cart-plus'></i></span>
                 <span class='action-table' onclick=\"removeInventory('$product->id', '$product->name')\"><i class='fa-solid fa-cart-arrow-down'></i></span>
                 <span class='action-table' onclick=\"deleteProduct('$product->id')\"><i class='fa-solid fa-trash'></i></span>
@@ -38,6 +39,13 @@ class Products extends Controller
         }
 
         return json_encode($table);
+    }
+
+    public function dataByID(Request $request){
+        $data = ProductsModel::getProductByID($request->id);
+        $data[0]->price_purchase = number_format($data[0]->price_purchase, '2', ',', '.');
+        $data[0]->price_sale = number_format($data[0]->price_sale, '2', ',', '.');
+        return json_encode($data[0]);
     }
 
     public function addInventory(Request $request){
