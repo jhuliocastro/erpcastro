@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\HistoryProductModel;
 use App\Models\ProductsModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Products extends Controller
 {
@@ -21,17 +23,15 @@ class Products extends Controller
         $table["data"] = [];
         foreach($list as $product){
             $action = "
-                <span class='action-table' onclick=\"editProduct('$product->id')\"><i class='fa-solid fa-edit'></i></span>
-                <span class='action-table' onclick=\"addInventory('$product->id', '$product->name')\"><i class='fa-solid fa-cart-plus'></i></span>
-                <span class='action-table' onclick=\"removeInventory('$product->id', '$product->name')\"><i class='fa-solid fa-cart-arrow-down'></i></span>
+                <span class='action-table' onclick=\"addInventory('$product->id')\"><i class='fa-solid fa-cart-plus'></i></span>
                 <span class='action-table' onclick=\"deleteProduct('$product->id')\"><i class='fa-solid fa-trash'></i></span>
             ";
 
             $table["data"][] = [
                 $product->codebar,
                 $product->name,
-                "R$ ".number_format($product->price_purchase, 2, ',', '.'),
-                "R$ ".number_format($product->price_sale, 2, ',', '.'),
+                $product->price_purchase,
+                $product->price_sale,
                 $product->inventory,
                 $product->unit,
                 $action
@@ -41,49 +41,33 @@ class Products extends Controller
         return json_encode($table);
     }
 
-    public function dataByID(Request $request){
-        $data = ProductsModel::getProductByID($request->id);
-        $data[0]->price_purchase = number_format($data[0]->price_purchase, '2', ',', '.');
-        $data[0]->price_sale = number_format($data[0]->price_sale, '2', ',', '.');
-        return json_encode($data[0]);
-    }
-
-    public function addInventory(Request $request){
-        $inventoryNow = ProductsModel::getProductByID($request->id);
-        $newInventory = $inventoryNow[0]->inventory + $request->amount;
-        $return = ProductsModel::updateInventory($request->id, $newInventory);
+    public function inventoryAdd(Request $request){
+        $product = ProductsModel::getProductByID($request->id_product);
+        $amountNew = $product[0]->inventory + $request->amount;
+        $return = ProductsModel::updateAmount($request->id_product, $amountNew);
         if($return){
-            return json_encode([
-                'status' => true,
-            ]);
+            $data = [
+                'product' => $request->id_product,
+                'amount' => $request->amount,
+                'action' => 'add',
+                'user' => Auth::user()->id
+            ];
+            $return = HistoryProductModel::store($data);
+            if($return){
+                return json_encode([
+                    'status' => true
+                ]);
+            }else{
+                return json_encode([
+                    'status' => false,
+                    'message' => 'Erro ao registrar histórico de estoque'
+                ]);
+            }
         }else{
             return json_encode([
                 'status' => false,
                 'message' => 'Erro ao alterar estoque'
             ]);
-        }
-    }
-
-    public function removeInventory(Request $request){
-        $inventoryNow = ProductsModel::getProductByID($request->id);
-        $newInventory = $inventoryNow[0]->inventory - $request->amount;
-        if($newInventory < 0){
-            return json_encode([
-                'status' => false,
-                'message' => 'Estoque não pode ficar abaixo de 0'
-            ]);
-        }else{
-            $return = ProductsModel::updateInventory($request->id, $newInventory);
-            if($return){
-                return json_encode([
-                    'status' => true,
-                ]);
-            }else{
-                return json_encode([
-                    'status' => false,
-                    'message' => 'Erro ao alterar estoque'
-                ]);
-            }
         }
     }
 
